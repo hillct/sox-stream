@@ -1,13 +1,14 @@
 sox-stream
 ==========
 
-> A stream wrapper around [SoX](http://sox.sourceforge.net/). Transcode audio streams easily!
+> A (better) stream wrapper around [SoX](http://sox.sourceforge.net/). Transcode audio streams easily!
 
-[![Build Status](https://travis-ci.org/ArtskydJ/sox-stream.svg)](https://travis-ci.org/ArtskydJ/sox-stream)
+[![Build Status](https://travis-ci.org/hillct/sox-stream.svg)](https://travis-ci.org/hillct/sox-stream)
 
 # Why
 
-The other implementations I found felt klunky to use. This module implements a streaming interface. (If you don't know how to use streams, I recommend reading the [stream handbook](https://github.com/substack/stream-handbook).)
+The implementaiton on which this is based utilies a temp file, in front of the child process call, rather than delivering the source audio via stdin which negates the performance calue of streams. This fork corrects that design flaw.
+For those unfamiliar with Node Streams, the [stream handbook](https://github.com/substack/stream-handbook) is an excellant beginners dicussion of the Node Streams interface.
 
 # Examples
 
