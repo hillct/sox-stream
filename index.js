@@ -12,6 +12,8 @@ module.exports = function soxStream(opts) {
 		.concat(hashToArray(opts.global || []))
 		.concat(hashToArray(opts.input || []))
 		.concat('-')
+		.concat(hashToArray(opts.input2 || []))
+		.concat(opts.filename2 || [])
 		.concat(hashToArray(opts.output || []))
 		.concat('-')
 		.concat(opts.effects || [])
